@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="pt-PT"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Confirmações — Alessandro & Marina</title><link rel="stylesheet" href="admin.css?v=24"><link rel="stylesheet" href="admin-overrides.css?v=24"></head>
+<body><main class="shell">
+  <header class="top"><div><p class="eyebrow">Alessandro & Marina · 10 julho 2027</p><h1>Confirmações</h1><p class="subtitle">Lista atualizada a partir do Netlify Forms.</p></div><div class="actions" id="actions" hidden><button id="refresh" type="button">Atualizar</button><button id="export" type="button">Exportar CSV</button><button id="print" type="button">Imprimir</button><button class="danger" id="clear-all" type="button">Limpar todas</button></div></header>
+  <section class="login card" id="login"><h2>Área reservada</h2><p>Introduz a palavra-passe de gestão configurada no Netlify.</p><form id="login-form"><label>Palavra-passe<input id="password" type="password" required autocomplete="current-password"></label><button class="primary" type="submit">Consultar respostas</button></form></section>
+  <p class="notice" id="notice" role="status" aria-live="polite"></p>
+  <section id="dashboard" hidden>
+    <div class="stats" id="stats"></div>
+    <nav class="filters" aria-label="Filtrar convidados"><button class="active" data-filter="all">Todos</button><button data-filter="adult">Adultos</button><button data-filter="baby">Até 3 anos</button><button data-filter="child">4–8 anos</button><button data-filter="youth">9–17 anos</button><button data-filter="diet">Com restrições</button></nav>
+    <section class="card"><div class="section-title"><div><p class="eyebrow">Pessoas confirmadas</p><h2 id="people-title">Lista completa</h2></div><input id="search" type="search" placeholder="Procurar nome ou restrição" aria-label="Procurar"></div><div class="table-wrap"><table><thead><tr><th>Nome</th><th>Faixa etária</th><th>Grupo / responsável</th><th>Restrições alimentares</th></tr></thead><tbody id="people-body"></tbody></table></div><p class="empty" id="people-empty" hidden>Nenhuma pessoa nesta categoria.</p></section>
+    <section class="card"><div class="section-title"><div><p class="eyebrow">Por resposta</p><h2>Grupos confirmados</h2></div></div><div class="groups" id="groups"></div></section>
+    <section class="card declined"><div class="section-title"><div><p class="eyebrow">Não estarão presentes</p><h2>Respostas negativas</h2></div><strong id="declined-total">0</strong></div><ul id="declined-list"></ul></section>
+  </section>
+</main><script src="admin.js?v=24"></script></body></html>
