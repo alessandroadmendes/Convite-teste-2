@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#182018">
+  <meta name="description" content="Convite de casamento de Alessandro e Marina — 10 de julho de 2027">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Alessandro & Marina — O nosso grande dia">
+  <meta property="og:description" content="10 de julho de 2027 · Estamos muito felizes por partilhar este dia contigo.">
+  <meta property="og:image" content="/assets/capa-floresta.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Alessandro & Marina — 10.07.2027</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css?v=64">
+  <link rel="stylesheet" href="overrides.css?v=64">
+  <script src="config.js?v=64" defer></script>
+  <script src="app.js?v=64" defer></script>
+</head>
+<body class="cover-locked name-reveal-pending">
+  <section class="cover envelope-cover" id="capa" aria-label="Capa do convite">
+    <img class="envelope-art" src="assets/cover-envelope-v1.png" alt="" fetchpriority="high">
+    <div class="envelope-grain" aria-hidden="true"></div>
+    <div class="envelope-seam" aria-hidden="true"></div>
+    <div class="cover-content envelope-content">
+      <div class="cover-heading envelope-heading">
+        <p class="guest-invite" id="guest-invite" hidden><strong id="guest-name"></strong><span>Gostaríamos muito de partilhar este dia convosco.</span></p>
+        <h1><span data-name-one>Alessandro</span><i>&amp;</i><span data-name-two>Marina</span></h1>
+        <p class="envelope-subtitle">O nosso grande dia</p>
+      </div>
+      <div class="envelope-medallion">
+        <button class="open-button invitation-seal" id="open-invite" type="button" aria-label="Abrir o convite">
+          <span class="seal-touch">Tocar para abrir</span>
+        </button>
+      </div>
+      <div class="cover-action envelope-action">
+        <p class="envelope-open-copy">Para abrir o convite, toca no selo</p>
+      </div>
+    </div>
+  </section>
+  <main id="convite" aria-hidden="true">
+    <figure class="embedded-photo second-photo-hero">
+      <img src="assets/capa-floresta.webp" alt="Alessandro e Marina entre os pinheiros" fetchpriority="high">
+      <div class="second-hero-shade"></div>
+      <figcaption class="second-hero-copy">
+        <p class="caps">O nosso para sempre</p>
+        <span class="second-hero-ornament">────── ♡ ──────</span>
+        <h2><span data-name-one>Alessandro</span><i>e</i><span data-name-two>Marina</span></h2>
+        <p class="second-hero-script">Duas vidas, um só caminho</p>
+        <span class="second-hero-date">10 · 07 · 2027</span>
+      </figcaption>
+    </figure>
+    <section class="paper details-section torn-top">
+      <header class="section-head"><p>Detalhes do nosso casamento</p><span>──────── ♡ ────────</span></header>
+      <div class="details-grid" id="details-grid"></div>
+    </section>
+    <section class="countdown-panel countdown-graphic">
+      <div class="countdown-content"><p class="caps">Faltam</p><div class="clock" aria-live="polite">
+        <div><strong id="days">000</strong><span>Dias</span></div><div><strong id="hours">00</strong><span>Horas</span></div>
+        <div><strong id="minutes">00</strong><span>Minutos</span></div><div><strong id="seconds">00</strong><span>Segundos</span></div>
+      </div><p class="countdown-phrase">Cada dia leva-nos mais perto do nosso para sempre.</p></div>
+    </section>
+    <section class="paper closing-section torn-top">
+      <div class="rsvp-block"><div class="people-icon"><svg viewBox="0 0 40 26" aria-hidden="true"><circle cx="14" cy="7" r="4"/><circle cx="26" cy="7" r="4"/><path d="M6 24c0-8 3-12 8-12s8 4 8 12M18 24c0-8 3-12 8-12s8 4 8 12"/></svg></div><h2>Confirma a tua presença</h2><p>A tua presença torna este dia ainda mais especial!</p><button class="primary-button form-button" id="rsvp-open" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h4"/></svg><span>Ver formulário</span><b>→</b></button></div>
+      <div class="quick-actions">
+        <article><span class="action-icon"><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="5" y="7" width="22" height="20" rx="2"/><path d="M10 4v6M22 4v6M5 13h22M10 18h12M10 22h8"/></svg></span><div><h3>Adiciona ao calendário</h3><p>Não te esqueças deste dia!</p><button id="calendar-button" type="button">⇩ &nbsp; Adicionar</button></div></article>
+        <article><span class="action-icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 29S6 19 6 11a10 10 0 0 1 20 0c0 8-10 18-10 18Z"/><circle cx="16" cy="11" r="3"/></svg></span><div><h3>Como chegar</h3><p data-venue>Quinta Montebello</p><a id="map-link" target="_blank" rel="noopener">⌖ &nbsp; Ver no mapa</a></div></article>
+      </div>
+      <div class="farewell"><p>Contamos muito com a tua presença!</p><span>──────── ♡ ────────</span></div>
+    </section>
+  </main>
+  <audio id="background-music" preload="auto" loop playsinline></audio>
+  <button id="music-toggle" class="music-toggle" type="button" aria-label="Pausar música" title="Pausar música" hidden><span aria-hidden="true">♫</span></button>
+  <dialog id="rsvp-dialog" tabindex="-1">
+    <div class="rsvp-surface">
+    <button class="dialog-close" id="rsvp-close" type="button" aria-label="Fechar">×</button>
+    <form id="rsvp-form" name="wedding-rsvp" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field">
+    <input type="hidden" name="form-name" value="wedding-rsvp">
+    <input type="hidden" name="details" id="netlify-details">
+    <p hidden><label>Não preencher: <input name="bot-field"></label></p>
+    <p class="caps">RSVP</p><h2>Confirma a tua presença</h2>
+    <label>Nome completo<input name="name" required autocomplete="name"></label>
+    <label>Estarás presente?<select id="attendance-select" name="attendance" required><option value="">Seleciona</option><option value="yes">Sim, com muito gosto!</option><option value="no">Infelizmente, não poderei ir</option></select></label>
+    <div id="attendee-details" hidden>
+      <label class="guest-count-label">Número total de pessoas, incluindo-te
+        <span class="guest-stepper">
+          <button id="guest-minus" type="button" aria-label="Retirar uma pessoa">−</button>
+          <input id="guest-count" name="guests" type="number" min="1" max="10" value="1" readonly required aria-live="polite">
+          <button id="guest-plus" type="button" aria-label="Adicionar uma pessoa">+</button>
+        </span>
+      </label>
+      <div id="guest-fields" class="guest-fields" aria-live="polite"></div>
+    </div>
+    <button class="primary-button full" type="submit">Enviar confirmação</button><p id="form-note" role="status"></p>
+    </form>
+    <section id="rsvp-success" class="rsvp-success" hidden>
+      <span class="success-heart">♡</span>
+      <p class="caps">Resposta registada</p>
+      <h2 id="success-title">Presença confirmada!</h2>
+      <p id="success-copy">Estamos muito felizes por partilhares este dia connosco.</p>
+      <div class="success-actions">
+        <button class="primary-button" id="success-calendar" type="button">Adicionar ao calendário</button>
+        <a class="primary-button outline" id="success-map" target="_blank" rel="noopener">Ver localização</a>
+        <button class="text-button" id="success-close" type="button">Voltar ao convite</button>
+      </div>
+    </section>
+    </div>
+  </dialog>
+</body>
+</html>
